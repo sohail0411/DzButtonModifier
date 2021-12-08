@@ -64,6 +64,24 @@ public struct DzButton: View {
     var overlaylineWidth:CGFloat = 1
     var strokeColor:Color = .white
     
+    
+    public  init(buttonTitle: String, backgroundColor: Color, width: CGFloat,height:CGFloat,alignment:Alignment,cornerRadius:CGFloat,foregroundColor:Color,overlaylineWidth:CGFloat,strokeColor:Color,buttonAction:@escaping () -> Void,font:Font) {
+             
+             self.buttonAction = buttonAction
+             self.buttonTitle = buttonTitle
+             self.font = font
+             self.backgroundColor = backgroundColor
+             self.width = width
+             self.height = height
+             self.alignment = alignment
+             self.cornerRadius = cornerRadius
+             self.foregroundColor = foregroundColor
+             self.overlaylineWidth = overlaylineWidth
+             self.strokeColor = strokeColor
+
+         }
+   
+    
     public  var body: some View {
         Button(action: buttonAction) {
             VStack{
